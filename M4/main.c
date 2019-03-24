@@ -28,8 +28,7 @@ static uint8_t dmaChannelNumTx, dmaChannelNumRx;
 static uint8_t uartABStart[] = "Starting UART Auto-Baud - Press any key! \n\r";
 static uint8_t uartABComplete[] = "UART Auto-Baudrate synchronized! \n\r";
 
-static uint8_t welcomeMessage[] =	"Welcome to an AES and dual core embedded demo using"
-																	"UART protocol. Press any key to continue, ESC to exit.\r\n";
+static uint8_t welcomeMessage[] =	"Welcome to an AES and dual core embedded demo using UART protocol. Press any key to continue, ESC to exit.\r\n";
 static uint8_t loopMessage[] = "Press any key to continue, ESC to exit.\r\n";
 static uint8_t endMessage[] = "Demo ended.\r\n";
 static uint8_t uartDMAMessage[] = "Insert string: \r\n";
