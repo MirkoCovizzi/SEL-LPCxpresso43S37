@@ -4,10 +4,10 @@
 #include "board.h"
 #include "app_dualcore_cfg.h"
 
-#define IPC_IRQ_Priority    IRQ_PRIO_IPC
+#define IPC_IRQ_Priority IRQ_PRIO_IPC
 #define IPC_IRQHandler M4_IRQHandler
-#define ClearTXEvent   Chip_CREG_ClearM4Event
-#define IPC_IRQn       M4_IRQn
+#define ClearTXEvent Chip_CREG_ClearM4Event
+#define IPC_IRQn M4_IRQn
 
 static volatile uint32_t notifyEvent;
 
@@ -31,7 +31,7 @@ int main(void)
 	extern void prvSetupTimerInterrupt(void);
 	SystemCoreClockUpdate();
 	
-		// Enable IPC interrupt
+	// Enable IPC interrupt
 	NVIC_SetPriority(IPC_IRQn, IPC_IRQ_Priority);
 	NVIC_EnableIRQ(IPC_IRQn);
 	
