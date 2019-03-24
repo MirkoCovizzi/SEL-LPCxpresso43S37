@@ -8,17 +8,17 @@
 #define LPC_UART LPC_USART0
 #define UARTx_IRQn  USART0_IRQn
 #define UARTx_IRQHandler UART0_IRQHandler
-STATIC RINGBUFF_T txring, rxring;
 
 // UART DMA
 #define _GPDMA_CONN_UART_Tx GPDMA_CONN_UART0_Tx
 #define _GPDMA_CONN_UART_Rx GPDMA_CONN_UART0_Rx
 
-#define IPC_IRQ_Priority    IRQ_PRIO_IPC
+#define IPC_IRQ_Priority IRQ_PRIO_IPC
 #define IPC_IRQHandler M0APP_IRQHandler
-#define ClearTXEvent   Chip_CREG_ClearM0AppEvent
-#define IPC_IRQn       M0APP_IRQn
+#define ClearTXEvent Chip_CREG_ClearM0AppEvent
+#define IPC_IRQn M0APP_IRQn
 
+static RINGBUFF_T txring, rxring;
 static volatile uint32_t channelTC;
 static volatile uint32_t channelTCErr;
 static volatile uint32_t notifyEvent;
@@ -29,7 +29,7 @@ static uint8_t uartABStart[] = "Starting UART Auto-Baud - Press any key! \n\r";
 static uint8_t uartABComplete[] = "UART Auto-Baudrate synchronized! \n\r";
 
 static uint8_t welcomeMessage[] =	"Welcome to an AES and dual core embedded demo using"
-									"UART protocol. Press any key to continue, ESC to exit.\r\n";
+																	"UART protocol. Press any key to continue, ESC to exit.\r\n";
 static uint8_t loopMessage[] = "Press any key to continue, ESC to exit.\r\n";
 static uint8_t endMessage[] = "Demo ended.\r\n";
 static uint8_t uartDMAMessage[] = "Insert string: \r\n";
@@ -135,7 +135,7 @@ int main(void)
 	Chip_UART_ABCmd(LPC_UART, UART_ACR_MODE0, true, ENABLE);
 	while (Chip_UART_GetABEOStatus(LPC_UART) == RESET) {}
 	Chip_UART_SendBlocking(LPC_UART, uartABComplete, sizeof(uartABComplete));
-  NVIC_DisableIRQ(UARTx_IRQn);
+	NVIC_DisableIRQ(UARTx_IRQn);
 
 	// Send welcome message to user
 	Chip_UART_SendBlocking(LPC_UART, welcomeMessage, sizeof(welcomeMessage));
