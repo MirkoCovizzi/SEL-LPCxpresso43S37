@@ -137,10 +137,10 @@ int main(void)
 	Chip_UART_SendBlocking(LPC_UART, uartABComplete, sizeof(uartABComplete));
   NVIC_DisableIRQ(UARTx_IRQn);
 
-  // Send welcome message to user
-  Chip_UART_SendBlocking(LPC_UART, welcomeMessage, sizeof(welcomeMessage));
+	// Send welcome message to user
+	Chip_UART_SendBlocking(LPC_UART, welcomeMessage, sizeof(welcomeMessage));
 
-  exitflag = RESET;
+	exitflag = RESET;
 	while (exitflag == RESET) {
 		len = 0;
 		while (len == 0) {
