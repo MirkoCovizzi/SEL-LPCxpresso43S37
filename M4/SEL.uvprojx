@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>CORE_M4</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\software\lpc_core\lpc_chip\chip_18xx_43xx;..\..\software\lpc_core\lpc_chip\chip_18xx_43xx\config_43xx;..\..\software\lpc_core\lpc_chip\chip_common;..\..\software\lpc_core\lpc_board\boards_43xx\nxp_lpcxpresso_4337;..\..\software\lpc_core\lpc_board\board_common;..\..\applications\lpc18xx_43xx\examples\dualcore\common</IncludePath>
+              <IncludePath>..\lpc_core\lpc_chip\chip_18xx_43xx;..\lpc_core\lpc_chip\chip_18xx_43xx\config_43xx;..\lpc_core\lpc_chip\chip_common;..\lpc_core\lpc_board\boards_43xx\nxp_lpcxpresso_4337;..\lpc_core\lpc_board\board_common;..\common</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -390,7 +390,7 @@
             <File>
               <FileName>m0_img_ldr.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\applications\lpc18xx_43xx\examples\dualcore\common\m0_img_ldr.c</FilePath>
+              <FilePath>..\common\m0_img_ldr.c</FilePath>
             </File>
           </Files>
         </Group>

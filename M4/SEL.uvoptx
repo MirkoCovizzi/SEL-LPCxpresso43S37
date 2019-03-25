@@ -201,7 +201,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\applications\lpc18xx_43xx\examples\dualcore\common\m0_img_ldr.c</PathWithFileName>
+      <PathWithFileName>..\common\m0_img_ldr.c</PathWithFileName>
       <FilenameWithoutPath>m0_img_ldr.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>

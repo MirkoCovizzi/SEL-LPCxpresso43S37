@@ -1,0 +1,6 @@
+--create .\keil_output\core_m0\lib_lpc_board_nxp_lpcxpresso_4337_m0.lib
+.\keil_output\core_m0\board.o
+.\keil_output\core_m0\board_sysinit.o
+.\keil_output\core_m0\wm8904.o
+.\keil_output\core_m0\lcd_st7565s.o
+.\keil_output\core_m0\lpc_phy_smsc87x0.o

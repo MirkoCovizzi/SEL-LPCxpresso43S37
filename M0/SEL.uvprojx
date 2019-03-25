@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>CORE_M0</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\software\lpc_core\lpc_chip\chip_18xx_43xx\config_43xx_m0app;..\..\software\lpc_core\lpc_chip\chip_18xx_43xx;..\..\software\lpc_core\lpc_chip\chip_common;..\..\software\lpc_core\lpc_board\boards_43xx\nxp_lpcxpresso_4337;..\..\software\lpc_core\lpc_board\board_common;..\..\software\CMSIS\CMSIS\Include;..\..\applications\lpc18xx_43xx\examples\dualcore\common</IncludePath>
+              <IncludePath>..\lpc_core\lpc_chip\chip_18xx_43xx\config_43xx_m0app;..\lpc_core\lpc_chip\chip_18xx_43xx;..\lpc_core\lpc_chip\chip_common;..\lpc_core\lpc_board\boards_43xx\nxp_lpcxpresso_4337;..\lpc_core\lpc_board\board_common;..\common</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -395,12 +395,12 @@
             <File>
               <FileName>lib_lpc_board_nxp_lpcxpresso_4337_m0.lib</FileName>
               <FileType>4</FileType>
-              <FilePath>..\..\software\lpc_core\lpc_board\boards_43xx\nxp_lpcxpresso_4337\keil_output\core_m0\lib_lpc_board_nxp_lpcxpresso_4337_m0.lib</FilePath>
+              <FilePath>..\lpc_core\lpc_board\boards_43xx\nxp_lpcxpresso_4337\keil_output\core_m0\lib_lpc_board_nxp_lpcxpresso_4337_m0.lib</FilePath>
             </File>
             <File>
               <FileName>lib_lpc_chip_43xx_m0.lib</FileName>
               <FileType>4</FileType>
-              <FilePath>..\..\software\lpc_core\lpc_chip\chip_18xx_43xx\keil_output\core_m0\lib_lpc_chip_43xx_m0.lib</FilePath>
+              <FilePath>..\lpc_core\lpc_chip\chip_18xx_43xx\keil_output\core_m0\lib_lpc_chip_43xx_m0.lib</FilePath>
             </File>
           </Files>
         </Group>
