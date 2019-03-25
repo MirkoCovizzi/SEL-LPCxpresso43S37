@@ -28,7 +28,6 @@ int main(void)
 	M0SharedBuffer = (uint8_t *) SHARED_MEM_M0;
 	memset(buffer, 0, sizeof(buffer));
 	
-	extern void prvSetupTimerInterrupt(void);
 	SystemCoreClockUpdate();
 	
 	// Enable IPC interrupt
