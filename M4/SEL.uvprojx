@@ -400,12 +400,12 @@
             <File>
               <FileName>lib_lpc_chip_43xx.lib</FileName>
               <FileType>4</FileType>
-              <FilePath>..\..\software\lpc_core\lpc_chip\chip_18xx_43xx\keil_output\core_m4\lib_lpc_chip_43xx.lib</FilePath>
+              <FilePath>..\lpc_core\lpc_chip\chip_18xx_43xx\keil_output\core_m4\lib_lpc_chip_43xx.lib</FilePath>
             </File>
             <File>
               <FileName>lib_lpc_board_nxp_lpcxpresso_4337.lib</FileName>
               <FileType>4</FileType>
-              <FilePath>..\..\software\lpc_core\lpc_board\boards_43xx\nxp_lpcxpresso_4337\keil_output\core_m4\lib_lpc_board_nxp_lpcxpresso_4337.lib</FilePath>
+              <FilePath>..\lpc_core\lpc_board\boards_43xx\nxp_lpcxpresso_4337\keil_output\core_m4\lib_lpc_board_nxp_lpcxpresso_4337.lib</FilePath>
             </File>
           </Files>
         </Group>

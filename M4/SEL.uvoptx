@@ -221,7 +221,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\software\lpc_core\lpc_chip\chip_18xx_43xx\keil_output\core_m4\lib_lpc_chip_43xx.lib</PathWithFileName>
+      <PathWithFileName>..\lpc_core\lpc_chip\chip_18xx_43xx\keil_output\core_m4\lib_lpc_chip_43xx.lib</PathWithFileName>
       <FilenameWithoutPath>lib_lpc_chip_43xx.lib</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -233,7 +233,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\software\lpc_core\lpc_board\boards_43xx\nxp_lpcxpresso_4337\keil_output\core_m4\lib_lpc_board_nxp_lpcxpresso_4337.lib</PathWithFileName>
+      <PathWithFileName>..\lpc_core\lpc_board\boards_43xx\nxp_lpcxpresso_4337\keil_output\core_m4\lib_lpc_board_nxp_lpcxpresso_4337.lib</PathWithFileName>
       <FilenameWithoutPath>lib_lpc_board_nxp_lpcxpresso_4337.lib</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
