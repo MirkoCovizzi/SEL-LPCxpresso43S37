@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<ProjectWorkspace xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="project_mpw.xsd">
+
+  <SchemaVersion>1.0</SchemaVersion>
+
+  <Header>### uVision Project, (C) Keil Software</Header>
+
+  <WorkspaceName>WorkSpace</WorkspaceName>
+
+  <project>
+    <PathAndName>..\..\..\..\software\lpc_core\lpc_chip\chip_18xx_43xx\lib_lpc_chip_43xx.uvprojx</PathAndName>
+    <NodeIsCheckedInBatchBuild>1</NodeIsCheckedInBatchBuild>
+  </project>
+
+  <project>
+    <PathAndName>..\..\..\..\software\lpc_core\lpc_chip\chip_18xx_43xx\lib_lpc_chip_43xx_m0.uvprojx</PathAndName>
+    <NodeIsCheckedInBatchBuild>1</NodeIsCheckedInBatchBuild>
+  </project>
+
+  <project>
+    <PathAndName>..\..\..\..\software\lpc_core\lpc_board\boards_43xx\nxp_lpcxpresso_4337\lib_lpc_board_nxp_lpcxpresso_4337.uvprojx</PathAndName>
+    <NodeIsCheckedInBatchBuild>1</NodeIsCheckedInBatchBuild>
+  </project>
+
+  <project>
+    <PathAndName>..\..\..\..\software\lpc_core\lpc_board\boards_43xx\nxp_lpcxpresso_4337\lib_lpc_board_nxp_lpcxpresso_4337_m0.uvprojx</PathAndName>
+    <NodeIsCheckedInBatchBuild>1</NodeIsCheckedInBatchBuild>
+  </project>
+
+  <project>
+    <PathAndName>.\dualcore\sa_blinky\sa_blinky.uvprojx</PathAndName>
+    <NodeIsCheckedInBatchBuild>1</NodeIsCheckedInBatchBuild>
+  </project>
+
+  <project>
+    <PathAndName>.\dualcore\sa_blinky_m0\sa_blinky_m0.uvprojx</PathAndName>
+    <NodeIsCheckedInBatchBuild>1</NodeIsCheckedInBatchBuild>
+  </project>
+
+  <project>
+    <PathAndName>.\dualcore\sa_webserver\sa_webserver.uvprojx</PathAndName>
+    <NodeIsCheckedInBatchBuild>1</NodeIsCheckedInBatchBuild>
+  </project>
+
+  <project>
+    <PathAndName>.\dualcore\sa_webserver_m0\sa_webserver_m0.uvprojx</PathAndName>
+    <NodeIsCheckedInBatchBuild>1</NodeIsCheckedInBatchBuild>
+  </project>
+
+  <project>
+    <PathAndName>.\dualcore\sa_usbd_msc\sa_usbd_msc.uvprojx</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>.\dualcore\sa_usbd_msc_m0\sa_usbd_msc_m0.uvprojx</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>.\dualcore\sa_webserver_usb_msc\sa_webserver_usb_msc.uvprojx</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>.\dualcore\sa_webserver_usb_msc_m0\sa_webserver_usb_msc_m0.uvprojx</PathAndName>
+    <NodeIsActive>1</NodeIsActive>
+  </project>
+
+  <project>
+    <PathAndName>.\dualcore\freertos_blinky\freertos_blinky.uvprojx</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>.\dualcore\freertos_blinky_m0\freertos_blinky_m0.uvprojx</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>.\dualcore\freertos_webserver\freertos_webserver.uvprojx</PathAndName>
+  </project>
+
+</ProjectWorkspace>

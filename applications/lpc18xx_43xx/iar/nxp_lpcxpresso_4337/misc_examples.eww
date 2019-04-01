@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<workspace>
+  <project>
+    <path>$WS_DIR$\..\..\..\..\software\lpc_core\lpc_chip\chip_18xx_43xx\lib_lpc_chip_43xx.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\..\..\..\..\software\lpc_core\lpc_board\boards_43xx\nxp_lpcxpresso_4337\lib_lpc_board_nxp_lpcxpresso_4337.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\misc\clock_apis\clock_apis.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\misc\otp_funcs\otp_funcs.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\misc\pmc_states\pmc_states.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\misc\trimpot\trimpot.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\misc\iox_sensor\iox_sensor.ewp</path>
+  </project>
+  <batchBuild>
+    <batchDefinition>
+      <name>all</name>
+      <member>
+        <project>lib_lpc_chip_43xx</project>
+        <configuration>chip_43xx_lib</configuration>
+      </member>
+      <member>
+        <project>lib_lpc_board_nxp_lpcxpresso_4337</project>
+        <configuration>nxp_lpcxpresso_4337</configuration>
+      </member>
+      <member>
+        <project>clock_apis</project>
+        <configuration>iflash_nxp_lpcxpresso_4337</configuration>
+      </member>
+      <member>
+        <project>iox_sensor</project>
+        <configuration>iflash_nxp_lpcxpresso_4337</configuration>
+      </member>
+      <member>
+        <project>otp_funcs</project>
+        <configuration>iflash_nxp_lpcxpresso_4337</configuration>
+      </member>
+      <member>
+        <project>pmc_states</project>
+        <configuration>iflash_nxp_lpcxpresso_4337</configuration>
+      </member>
+      <member>
+        <project>trimpot</project>
+        <configuration>iflash_nxp_lpcxpresso_4337</configuration>
+      </member>
+    </batchDefinition>
+  </batchBuild>
+</workspace>
+
+

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<workspace>
+  <project>
+    <path>$WS_DIR$\..\..\..\..\software\lpc_core\lpc_board\boards_43xx\nxp_lpcxpresso_4337\lib_lpc_board_nxp_lpcxpresso_4337.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\..\..\..\..\software\lpc_core\lpc_chip\chip_18xx_43xx\lib_lpc_chip_43xx.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\periph\sdio\sdio.ewp</path>
+  </project>
+  <batchBuild>
+    <batchDefinition>
+      <name>all</name>
+      <member>
+        <project>lib_lpc_chip_43xx</project>
+        <configuration>chip_43xx_lib</configuration>
+      </member>
+      <member>
+        <project>lib_lpc_board_nxp_lpcxpresso_4337</project>
+        <configuration>nxp_lpcxpresso_4337</configuration>
+      </member>
+      <member>
+        <project>sdio</project>
+        <configuration>iflash_nxp_lpcxpresso_4337</configuration>
+      </member>
+    </batchDefinition>
+  </batchBuild>
+</workspace>
+
+

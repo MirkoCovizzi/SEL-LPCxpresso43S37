@@ -1,0 +1,7 @@
+<LPCOpenCfg>
+	<symbol name="varExampleDestInc" value="example/inc"/>
+	<symbol name="varLocalIncEnable" value="${varExampleEnable}"/>
+	<symbol name="varExampleIncDir"  value="${varExampleSrcDir}/configs"/>
+	<module name="basic_example"/>
+	<module name="emwin"/>
+</LPCOpenCfg>
