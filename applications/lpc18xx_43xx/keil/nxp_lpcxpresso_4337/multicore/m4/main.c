@@ -1,5 +1,14 @@
+#include <string.h>
 #include "chip.h"
 #include "board.h"
+#include "app_multicore_cfg.h"
+#include "ipc_example.h"
+#include "ipc_msg.h"
+
+#define SHARED_MEM_IPC      0x10088000
+#define IPC_IRQ_Priority    7
+#define IPC_IRQn       M0APP_IRQn
+static volatile int notify = 0;
 
 #define LPC_UART LPC_USART0
 #define UARTx_IRQn  USART0_IRQn
@@ -22,6 +31,15 @@ static volatile uint32_t channelTC;	/* Terminal Counter flag for Channel */
 static volatile uint32_t channelTCErr;
 static FunctionalState  isDMATx = ENABLE;
 
+void M0APP_IRQHandler(void)
+{
+	int i;
+	LPC_CREG->M0APPTXEVENT = 0;
+	Board_LED_Set(0, 0);
+	for (i = 0; i < 500000; i++) {}
+	notify = 1;
+}
+
 static void App_DMA_Init(void)
 {
 	/* Initialize GPDMA controller */
@@ -42,9 +60,10 @@ static void App_DMA_DeInit(void)
 static void App_DMA(void)
 {
 	uint8_t receiveBuffer[16];
+	uint8_t *ipcBuffer = (uint8_t *) SHARED_MEM_IPC;
 	int i;
 	uint8_t temp;
-
+	
 	App_DMA_Init();
 	dmaChannelNumTx = Chip_GPDMA_GetFreeChannel(LPC_GPDMA, _GPDMA_CONN_UART_Tx);
 
@@ -64,27 +83,32 @@ static void App_DMA(void)
 					  _GPDMA_CONN_UART_Rx,
 					  (uint32_t) &receiveBuffer[0],
 					  GPDMA_TRANSFERTYPE_P2M_CONTROLLER_DMA,
-					  13);
+					  16);
 	while (!channelTC) {}
 	
 	for (i = 0; i < 13; i++) {
-		temp = receiveBuffer[i + 1];
+		temp = receiveBuffer[i + 2];
 		receiveBuffer[i] = temp;
 	}
 	
 	receiveBuffer[12] = 'M';
 	receiveBuffer[13] = '4';
-	receiveBuffer[14] = 'M';
-	receiveBuffer[15] = '0';
+	
+	memcpy(ipcBuffer, receiveBuffer, 16);
+	__DSB();
+	__SEV();
+	while(!notify) {}
+	notify = 0;
 
 	isDMATx = ENABLE;
 	channelTC = channelTCErr = 0;
 	Chip_GPDMA_Transfer(LPC_GPDMA, dmaChannelNumTx,
-					  (uint32_t) &receiveBuffer[0],
+					  (uint32_t) &ipcBuffer[0],
 					  _GPDMA_CONN_UART_Tx,
 					  GPDMA_TRANSFERTYPE_M2P_CONTROLLER_DMA,
 					  16);
 	while (!channelTC) {}
+	DEBUGSTR("\r\n");
 
 	App_DMA_DeInit();
 }
@@ -120,6 +144,14 @@ int main(void)
 
 	SystemCoreClockUpdate();
 	Board_Init();
+	
+	if (M0Image_Boot(CPUID_M0APP, (uint32_t) BASE_ADDRESS_M0APP) < 0) {
+		DEBUGSTR("Unable to BOOT M0APP Core!");
+	}
+	
+	NVIC_SetPriority(IPC_IRQn, IPC_IRQ_Priority);
+	NVIC_EnableIRQ(IPC_IRQn);
+	
 	Board_UART_Init(LPC_UART);
 
 	Chip_UART_SetupFIFOS(LPC_UART, (UART_FCR_FIFO_EN | UART_FCR_RX_RS |

@@ -1,4 +1,5 @@
 .\keil_output\main.o: main.c
+.\keil_output\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\keil_output\main.o: ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_18xx_43xx\chip.h
 .\keil_output\main.o: ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_18xx_43xx\config_43xx\sys_config.h
 .\keil_output\main.o: ..\..\..\..\..\..\software\lpc_core\lpc_chip\chip_18xx_43xx\cmsis.h
@@ -65,3 +66,6 @@
 .\keil_output\main.o: ..\..\..\..\..\..\software\lpc_core\lpc_board\boards_43xx\nxp_lpcxpresso_4337\board.h
 .\keil_output\main.o: ..\..\..\..\..\..\software\lpc_core\lpc_board\board_common\board_api.h
 .\keil_output\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\keil_output\main.o: ..\..\..\..\examples\multicore\sa_blinky_m4\app_multicore_cfg.h
+.\keil_output\main.o: ..\..\..\..\examples\multicore\common\ipc_example.h
+.\keil_output\main.o: ..\..\..\..\examples\multicore\common\ipc_msg.h

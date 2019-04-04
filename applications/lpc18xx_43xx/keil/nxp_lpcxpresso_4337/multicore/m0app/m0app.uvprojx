@@ -403,14 +403,14 @@
               <FilePath>..\..\..\..\startup_code\keil_startup_lpc43xx_m0app.s</FilePath>
             </File>
             <File>
-              <FileName>blinky_m0.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\..\..\examples\multicore\sa_blinky_m0\blinky_m0.c</FilePath>
-            </File>
-            <File>
               <FileName>readme.txt</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\..\..\examples\multicore\common\readme.txt</FilePath>
+            </File>
+            <File>
+              <FileName>main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\main.c</FilePath>
             </File>
           </Files>
         </Group>
